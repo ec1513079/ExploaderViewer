@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Exploader Viewer",
-  "description": "Exploader Viewer description.",
+  "name": "Uploader Viewer",
+  "description": "Uploader Viewer description.",
   "version": "0.0.1",
 
   "icons":
