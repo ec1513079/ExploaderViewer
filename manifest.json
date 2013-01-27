@@ -16,5 +16,6 @@
   },
 
   "permissions": [
+    "http://www.exploader.net/*"
   ]
 }
