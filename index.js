@@ -1,11 +1,33 @@
 
+var pop_options = {
+    placement: function (context, source) {
+        var position = $(source).position();
+
+        if (position.left > 515) {
+            return "left";
+        }
+
+        if (position.left < 515) {
+            return "right";
+        }
+
+        if (position.top < 110){
+            return "bottom";
+        }
+
+        return "top";
+    }
+    , trigger: "hover"
+};
+
 function thumbnailsTag(title, img_s, img_l, link_url) {
 	return '<li class="span4">' +
 	'<div class="thumbnail">' +
-	'<a href="' + link_url + '" class="thumbnail" target="_blank">' +
+	'<a href="' + link_url + '" class="popover_img thumbnail" target="_blank" ' +
+		' data-content="<img src=\'' + img_l + '\' />" rel="popover" data-original-title="' + title + '" >' +
 	'<p class="title">' + title + '</p>' +
-	'<img class="t_img" alt="" src="' + img_s + '" style=" ">' +
-	'<img class="p_img" alt="" src="' + img_l + '" style="">' +
+	'<img class="t_img" alt="" src="' + img_s + '" >' +
+	'<img class="p_img" alt="" src="' + img_l + '" >' +
 	'</a>' +
 	'</div>' +
 	'</li>';
@@ -32,6 +54,7 @@ $(document).ready(function(){
 				var title_ = $(this).text();
 				$("#exploader_container > ul#thumbnails_ul").append(thumbnailsTagForExploader(link_, title_));
 			});
+			$('.popover_img').popover(pop_options);
 			
 			$('[data-spy="scroll"]').each(function () {
 				var $spy = $(this).scrollspy('refresh');
