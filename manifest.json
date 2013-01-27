@@ -16,6 +16,7 @@
   },
 
   "permissions": [
-    "http://www.exploader.net/*"
+    "http://www.exploader.net/*",
+    "http://2dbook.com/*"
   ]
 }

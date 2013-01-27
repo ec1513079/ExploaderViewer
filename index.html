@@ -2,12 +2,17 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploader Viewer</title>
+    <title>Uploader Viewer</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
     <style>
+    	.page-header {
+    		padding-left: 20px;
+    		padding-bottom: 0px;
+    		margin-bottom: 10px;
+    	}
     	.thumbnail > p.title {
     		float: left;
     		max-width: 140px;
@@ -23,11 +28,17 @@
     	}
     </style>
   </head>
-  <body style="padding-top: 60px;">
+  <body data-spy="scroll" data-target=".navbar" style="padding-top: 60px;">
   	
   	<div class="navbar navbar-fixed-top">
   		<div class="navbar-inner">
-  			<a href="http://www.exploader.net/"><h3 class="nav" style="padding-left: 20px;">Exploader Viewer</h3></a>
+  			<h3 class="nav" style="padding-left: 20px;">Uploader Viewer</h3>
+  			
+  			<ul class="nav">
+      			<li id="nav_exp_li"><a href="#exploader_container">Exploder</a></li>
+      			<li id="nav_2db_li"><a href="#2dbook_container">2dbook</a></li>
+    		</ul>
+    		
   			<form class="navbar-form pull-right" style="padding-right: 20px;">
   				<button type="submit" class="btn"><i class="icon-repeat"></i></button>
   			</form>
@@ -35,7 +46,20 @@
   	</div>
     
     <div class="container-fluid">
-    	<ul class="thumbnails" id="thumbnails_ul"></ul>
+    	
+    	<div id="exploader_container">
+    		<a href="http://www.exploader.net/" target="_blank">
+    			<h3 class="page-header">Exploader Viewer</h3>
+    		</a>
+    		<ul class="thumbnails" id="thumbnails_ul"></ul>
+    	</div>
+    	
+    	<div id="2dbook_container">
+    		<a href="http://2dbook.com/" target="_blank">
+    			<h3 class="page-header">2dbook Viewer</h3>
+    		</a>
+    		<ul class="thumbnails" id="thumbnails_ul"></ul>
+    	</div>
     </div>
     
   </body>
