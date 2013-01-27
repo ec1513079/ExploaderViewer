@@ -3,9 +3,9 @@ function thumbnailsTag(base_url, title) {
 	return '<li class="span4">' +
 	'<div class="thumbnail">' +
 	'<a href="' + base_url + '" class="thumbnail">' +
-	'<p>' + title + '</p>' +
+	'<p class="title">' + title + '</p>' +
 	'<img class="t_img" alt="" src="' + base_url + '/t.jpg' + '" style=" ">' +
-	'<img class="p_img img-polaroid" alt="" src="' + base_url + '/p.jpg' + '" style="">' +
+	'<img class="p_img" alt="" src="' + base_url + '/p.jpg' + '" style="">' +
 	'</a>' +
 	'</div>' +
 	'</li>';
