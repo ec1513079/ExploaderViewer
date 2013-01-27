@@ -77,6 +77,7 @@ $(document).ready(function(){
 				var thumb_img_url_ = $(this).find("div.thumb > a > img").attr("src");
 				$("#2dbook_container > ul#thumbnails_ul").append(thumbnailsTagFor2dbook(thumb_img_url_, title_));
 			});
+			$('.popover_img').popover(pop_options);
 			
 			$('[data-spy="scroll"]').each(function () {
 				var $spy = $(this).scrollspy('refresh');
