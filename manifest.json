@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "Exploader Viewer",
+  "description": "Exploader Viewer description.",
+  "version": "0.0.1",
+
+  "icons":
+  {
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "options_page": "options.html",
+
+  "background" : {
+    "scripts": ["jquery/js/jquery-1.9.0.min.js","options.js","page_icon_script.js","bootloader_backgound.js"]
+  },
+  "page_action":
+  {
+    "default_icon" : "img/icon-19-disable.png",
+    "default_title": "Bootloader"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.exploader.net/*","http://2dbook.com/books/*"],
+      "js": ["jquery/js/jquery-1.9.0.min.js","content_script.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
