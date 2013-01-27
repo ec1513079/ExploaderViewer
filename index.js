@@ -2,10 +2,10 @@
 function thumbnailsTag(base_url, title) {
 	return '<li class="span4">' +
 	'<div class="thumbnail">' +
-	'<p>' + title + '</p>' +
 	'<a href="' + base_url + '" class="thumbnail">' +
-	'<img data-src="holder.js/300x200" alt="" src="' + base_url + '/t.jpg' + '">' +
-	'<img data-src="holder.js/300x200" alt="" src="' + base_url + '/p.jpg' + '">' +
+	'<p>' + title + '</p>' +
+	'<img class="t_img" alt="" src="' + base_url + '/t.jpg' + '" style=" ">' +
+	'<img class="p_img img-polaroid" alt="" src="' + base_url + '/p.jpg' + '" style="">' +
 	'</a>' +
 	'</div>' +
 	'</li>';
