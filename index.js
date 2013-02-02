@@ -21,13 +21,12 @@ var pop_options = {
 };
 
 function thumbnailsTag(title, img_s, img_l, link_url) {
-	return '<li class="span4">' +
+	return '<li>' +
 	'<div class="thumbnail">' +
 	'<a href="' + link_url + '" class="popover_img thumbnail" target="_blank" ' +
-		' data-content="<img src=\'' + img_l + '\' />" rel="popover" data-original-title="' + title + '" >' +
+		' data-content="<img class=\'popover_content_img\' src=\'' + img_l + '\' />" rel="popover" data-original-title="' + title + '" >' +
 	'<p class="title">' + title + '</p>' +
 	'<img class="t_img" alt="" src="' + img_s + '" >' +
-	'<img class="p_img" alt="" src="' + img_l + '" >' +
 	'</a>' +
 	'</div>' +
 	'</li>';
@@ -75,7 +74,7 @@ $(document).ready(function(){
 				var link_  = "http://2dbook.com" + file_title_a.attr("href");
 				var title_ = file_title_a.text();
 				var thumb_img_url_ = $(this).find("div.thumb > a > img").attr("src");
-				$("#2dbook_container > ul#thumbnails_ul").append(thumbnailsTagFor2dbook(thumb_img_url_, title_));
+				$("#2dbook_container > ul#thumbnails_ul").append(thumbnailsTagFor2dbook(thumb_img_url_, title_, link_));
 			});
 			$('.popover_img').popover(pop_options);
 			
