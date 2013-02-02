@@ -3,11 +3,11 @@ var pop_options = {
     placement: function (context, source) {
         var position = $(source).position();
 
-        if (position.left > 515) {
+        if (position.left > 415) {
             return "left";
         }
 
-        if (position.left < 515) {
+        if (position.left < 415) {
             return "right";
         }
 
